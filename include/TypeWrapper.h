@@ -6,6 +6,7 @@
 #include "./FloatWrapper.h"
 #include "./StringWrapper.h"
 #include "./ListWrapper.h"
+#include "./Utils.h"
 // #include "boolean_wrapper.h"
 
 #endif
