@@ -1,9 +1,12 @@
 #include "StringWrapper.h"
-#include "IntegerWrapper.h"
-#include "ListWrapper.h"
 
 #include <stdexcept>
 #include <string>
+
+#include "IntegerWrapper.h"
+#include "FloatWrapper.h"
+
+#include "ListWrapper.h"
 
 // Implement the to_i method
 Integer String::to_i() const {
@@ -15,7 +18,7 @@ Integer String::to_i() const {
     }
 }
 
-
+// Implement the split method
 List<String> String::split(const std::string& delimiter) const {
     List<String> result;
     size_t pos = 0;
@@ -33,3 +36,6 @@ List<String> String::split(const std::string& delimiter) const {
 
     return result;
 }
+
+// Implement the to_f method
+Float String::to_f() const { return Float(std::stof(value)); }

@@ -7,6 +7,7 @@
 
 // Forward declarationd
 class Integer;
+class Float;
 template <typename T>
 class List;
 
@@ -64,6 +65,8 @@ class String {
 
     // Declaration of split, to be implemented in .cpp file
     List<String> split(const std::string& delimiter = " ") const;
+
+    Float to_f() const;
 };
 
 #endif  // STRING_WRAPPER_H

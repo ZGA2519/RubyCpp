@@ -3,10 +3,14 @@
 
 #include <iostream>
 #include <stdexcept> // For std::invalid_argument
+#include <cmath>
+
+class Integer;
+class String;
 
 class Float {
 private:
-    float value;
+    double value;
 
 public:
     // Default constructor
@@ -128,6 +132,22 @@ public:
 
     void setValue(float v) {
         value = v;
+    }
+
+    Integer to_i() const {
+        return (int)value;
+    }
+
+    Integer ceil() const {
+        return (int)std::ceil(value);
+    }
+
+    Integer floor() const {
+        return (int)std::floor(value);
+    }
+
+    String to_s() const {
+        return String(std::to_string(value));
     }
 };
 
